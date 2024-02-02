@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
 	import { confetti } from '@neoconfetti/svelte';
 	import { enhance } from '$app/forms';
 
@@ -87,6 +89,32 @@
 			.querySelector(`[data-key="${event.key}" i]`)
 			?.dispatchEvent(new MouseEvent('click', { cancelable: true }));
 	}
+	import { onMount } from "svelte";
+  
+	let responseData = null;
+  
+	onMount(async () => {
+	  // URL à partir de laquelle nous allons récupérer les données
+	  const apiUrl = 'https://random-word-api.herokuapp.com/word?length=5';
+  
+	  try {
+		// Effectuer une requête fetch
+		const response = await fetch(apiUrl);
+  
+		// Vérifier si la réponse est OK (statut HTTP 200-299)
+		if (!response.ok) {
+		  throw new Error(`Erreur HTTP! Statut: ${response.status}`);
+		}
+  
+		// Récupérer les données JSON
+		responseData = await response.json();
+		console.log('Données récupérées:', responseData);
+		document.getElementById('mot_a_trouver').innerHTML = responseData[0];
+	  } catch (error) {
+		// Gérer les erreurs de la requête fetch
+		console.error('Erreur de fetch:', error);
+	  }
+	});
 </script>
 
 <svelte:window on:keydown={keydown} />
@@ -97,7 +125,7 @@
 </svelte:head>
 
 <h1 class="visually-hidden">Sverdle</h1>
-
+<p id="mot_a_trouver"></p>
 <form
 	method="POST"
 	action="?/enter"
