@@ -1,15 +1,11 @@
-:root {
-  --theme-main: #111;
-  --theme-shadow: rgba(0, 0, 0, .5);
-  --theme-text-color: #eee;
-}
+@import url(./common.css);
 
 * {
   padding: unset;
   margin: unset;
   outline-style: none;
   border-style: none;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
@@ -73,5 +69,14 @@ body > div:has(.page-home)>div h1 {
     color: var(--theme-text-color);
     font-weight: lighter;
     letter-spacing: 5px;
+    font-size: 48px;
     text-shadow: -5px 5px 5px var(--theme-shadow);
+}
+
+body > div:has(.page-home)>div >div {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }

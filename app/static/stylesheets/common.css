@@ -1,0 +1,7 @@
+:root {
+    --theme-color: #9428ff;
+    --theme-main: #111;
+    --theme-sub: #222;
+    --theme-shadow: rgba(0, 0, 0, .5);
+    --theme-text-color: #eee;
+}
