@@ -1,7 +1,7 @@
 <script>
-  import Play from "$lib/images/components/home/play.svelte";
-  import Stats from "$lib/images/components/home/stats.svelte";
-  import Credits from "$lib/images/components/home/credits.svelte";
+  import Play from "$lib/components/home/play.svelte";
+  import Stats from "$lib/components/home/stats.svelte";
+  import Credits from "$lib/components/home/credits.svelte";
 </script>
 
 <div class="page-home">
