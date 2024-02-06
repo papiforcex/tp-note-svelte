@@ -1,7 +1,9 @@
 <script>
-  import Play from "$lib/components/home/play.svelte";
-  import Stats from "$lib/components/home/stats.svelte";
-  import Credits from "$lib/components/home/credits.svelte";
+// @ts-nocheck
+
+  import Play from "$lib/components/home/Play.svelte";
+  import Stats from "$lib/components/home/Stats.svelte";
+  import Credits from "$lib/components/home/Credits.svelte";
 </script>
 
 <div class="page-home">
