@@ -1,14 +1,20 @@
 <!-- lib/components/home/Play.svelte -->
 <script>
+  import { createEventDispatcher } from 'svelte';
+    const dispatch = createEventDispatcher();
+
+    function triggerParentFunction() {
+        dispatch('childClick');
+    }
   export let Play;
 </script>
 
 <div>
-  <button>
+  <button on:click="{() => alert('Les paramètres ne sont pas encore disponibles')}">
     <span class="material-symbols-outlined settings">settings</span>
   </button>
   <span></span>
-  <button>
+  <button on:click={() => triggerParentFunction()}>
     <span class="material-symbols-outlined play">stadia_controller</span>
     <p>Jouer</p>
   </button>

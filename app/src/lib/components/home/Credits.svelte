@@ -4,7 +4,7 @@
 </script>
 
 <div>
-  <button>
+  <button on:click="{() => alert('Ce projet a été créé par Fayad MAOULANA, Théo BENET-CHAPARD et Kylian PRÉVOT :)')}">
     <span class="material-symbols-outlined play">person</span>
     <div></div>
     <p>Crédits</p>

@@ -4,7 +4,7 @@
 </script>
 
 <div>
-  <button>
+  <button on:click="{() => confirm('Aucune statistique n\'est disponible pour l\'instant. Pensez à jour pour enregistrer votre score!') ? window.open('/puissance4', '_self') : null}">
     <span class="material-symbols-outlined play">bar_chart</span>
     <div></div>
     <p>Statistiques</p>
