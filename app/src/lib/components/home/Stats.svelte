@@ -1,13 +1,13 @@
-<!-- lib/components/home/Credits.svelte -->
+<!-- lib/components/home/Stats.svelte -->
 <script>
-  export let Credits;
+  export let Stats;
 </script>
 
 <div>
-  <button>
-    <span class="material-symbols-outlined play">person</span>
+  <button on:click="{() => confirm('Aucune statistique n\'est disponible pour l\'instant. Pensez à jour pour enregistrer votre score!') ? window.open('/puissance4', '_self') : null}">
+    <span class="material-symbols-outlined play">bar_chart</span>
     <div></div>
-    <p>Crédits</p>
+    <p>Statistiques</p>
   </button>
 </div>
 

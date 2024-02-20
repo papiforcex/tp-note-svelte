@@ -1,13 +1,13 @@
-<!-- lib/components/home/Stats.svelte -->
+<!-- lib/components/home/Credits.svelte -->
 <script>
-  export let Stats;
+  export let Credits;
 </script>
 
 <div>
-  <button>
-    <span class="material-symbols-outlined play">bar_chart</span>
+  <button on:click="{() => alert('Ce projet a été créé par Fayad MAOULANA, Théo BENET-CHAPARD et Kylian PRÉVOT :)')}">
+    <span class="material-symbols-outlined play">person</span>
     <div></div>
-    <p>Statistiques</p>
+    <p>Crédits</p>
   </button>
 </div>
 
