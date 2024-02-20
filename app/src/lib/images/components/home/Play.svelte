@@ -5,7 +5,7 @@
 
 <div>
   <button>
-    <span class="material-symbols-outlined settings">settings</span>
+    <span class="material-symbols-outlined settings" on:click="{() => alert('Les paramètres ne sont pas encore disponibles')}">settings</span>
   </button>
   <span></span>
   <button>
